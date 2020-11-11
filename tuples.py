@@ -31,7 +31,7 @@ print(_nameTuple)
 _nameFull = 'Isabella Charlotte David Elina Ronald Mary Cecilia Thalia'
 _listTuples = list()
 for _word in _nameFull.split():
-    _listTuples.append((len(_word),_word))
+    _listTuples.append((len(_word),_word)) # List of tuples
 print(_listTuples)
 _listTuples.sort(reverse=True) # Orderna por el primer elemeto de la tupla
 print(_listTuples)
