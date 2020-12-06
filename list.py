@@ -116,3 +116,12 @@ print(_alphabet)
 
 _listXXX = list([1,2,3,4])
 print(_listXXX)
+
+# Is necesary create thw ENUMERATE
+_position = None
+print(_position)
+for _index, _el in enumerate(_listXXX):
+    if _el == 3:
+        _position = _index
+        break
+print(_position)
