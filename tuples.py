@@ -2,9 +2,9 @@ _data = 1, 2, 3, 4, 5, 6
 print(_data, ' -> ', type(_data))
 _dataNotes = (10, 20, 30, 40, 50)
 print(_dataNotes, ' -> ', type(_dataNotes))
-_tuplaOneElement = ('a')
-print(_tuplaOneElement, ' -> ', type(_tuplaOneElement)) # error create a tuple: one element
-_tuplaOneElement = ('a',)
+_tuplaOneElement = ('a') # Not is TUPLE, is a string
+print(_tuplaOneElement, ' -> ', type(_tuplaOneElement)) # error to create a tuple: one element
+_tuplaOneElement = ('a',) # Create a tuple with element
 print(_tuplaOneElement, ' -> ', type(_tuplaOneElement)) # OK
 
 # empty tuple
@@ -16,16 +16,16 @@ _nameTuple = tuple('RonaldDanielAjilaCalva')
 print(_nameTuple[0])
 print(_nameTuple)
 print(_nameTuple[1:4])
-_nameTuple = ('O',) + _nameTuple[1:]
+_nameTuple = ('O',) + _nameTuple[1:] # create new tuple. Use + for concatenar
 print(_nameTuple)
-# _nameTuple[1:3] = ('O', 'N') # Error
-# _nameTuple[2] = 'N' # error
+# _nameTuple[1:3] = ('O', 'N') # Error. Tuple is INMUTABLE
+# _nameTuple[2] = 'N' # error. Tuple is INMUTABLE
 
 # function
 def changeData(__data):
     __data =  ('O',)
 
-changeData(_nameTuple) # no change value of variable
+changeData(_nameTuple) # no change value of variable. Tuple is INMUTABLE
 print(_nameTuple)
 
 _nameFull = 'Isabella Charlotte David Elina Ronald Mary Cecilia Thalia'

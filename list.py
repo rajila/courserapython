@@ -102,14 +102,14 @@ delete_head2(_alphabet)
 print(_alphabet)
 
 def delete_head3(__t):
-    __t = __t[:]
+    __t = __t[:] # [:] -> new list
     __t.pop(0)
 
 delete_head3(_alphabet)
 print(_alphabet)
 
 def delete_head4(__t):
-    __t[:].pop(0)
+    __t[:].pop(0) # [:] -> delete first element of new list
 
 delete_head4(_alphabet)
 print(_alphabet)
