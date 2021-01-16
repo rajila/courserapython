@@ -21,4 +21,5 @@ _mapA = dict()
 for _letter in _word.lower() :
     _mapA[_letter] = _mapA.get(_letter,0) + 1
 print(_mapA)
-print(dir(_mapA))
+print(_mapA.get('q')) # Sin error aunq no exista la key: q. Si no existe la key retorna un None
+# print(_mapA['q']) # Error porq no existe key: q

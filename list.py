@@ -1,3 +1,5 @@
+import re
+
 print('Init with List')
 _dataStudents = ['Ronald', 'Mary', 'Thalia', 'David','Elina', 'Charlotte', 'Isa']
 print(_dataStudents)
@@ -124,4 +126,22 @@ for _index, _el in enumerate(_listXXX):
     if _el == 3:
         _position = _index
         break
-print(_position)
+print('position ->', _position)
+
+lwords = ['hi', 'from', 'any', 'salprieta', 'salmon']
+textWords = 'hi from any salprieta salmon'
+print('sal' in lwords) # false
+print(textWords.find('sal')) # index of first coincidencia, no sirve para comparar palabras
+print(re.findall('sal', textWords)) # retorna una parte de las palabras: ['sal', 'sal']
+print(re.search('^sal', textWords)) # no encuentra la coincidencia: None
+print(re.search('^hi', textWords)) # si encuentra devuelve un object
+
+print(lwords.index('from')) # retorna la posicion de la lista, en donde se encuentra la palabra. primera ocurrencia
+# print(lwords.index('sal')) # retorna error porque no encuentra la palabra en la lista
+
+matriz = []
+matriz.append([1,2,3])
+matriz.append([4,5,6])
+print('value celda[0][1] -> ', matriz[0][1])
+print('# row ->', len(matriz))
+print('# col ->', len(matriz[0]))
