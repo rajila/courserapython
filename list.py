@@ -145,3 +145,57 @@ matriz.append([4,5,6])
 print('value celda[0][1] -> ', matriz[0][1])
 print('# row ->', len(matriz))
 print('# col ->', len(matriz[0]))
+
+treplace = 'salmon is animal del mar. Alimento de los osos, tambien sirve de alimento para las personas. El salmon se lo come con poca sal'
+print(treplace)
+treplace = treplace.lower().replace('alimento', 'ajis')
+print(treplace)
+treplace = treplace.replace('sal', 'SSAALL')
+print(treplace)
+
+lTestOne = [1,2,3]
+lTestOne.insert(-1, 10)
+lTestTwo = lTestOne # Apunta  a la misma direccion de memoria
+print('L1 ->', lTestOne)
+lTestOne.append(21)
+print('L1 ->', lTestOne)
+print('L2 ->', lTestTwo)
+lTestThree = lTestOne.copy() # crea una copia de la lista y guarda en otra direccion de memoria
+lTestOne.append(31)
+print('L1 ->', lTestOne)
+print('L3 ->', lTestThree)
+lTestThree.clear() # elimina todos los elementos de la lista
+print('L3 ->', lTestThree)
+tu = tuple()
+tu = (1,2) + (3,4)
+print(tu)
+tu = tu[0] + tu[1]
+print(tu)
+tu = (1,2,3,4)
+print(tu)
+tu = tu[1:-1]
+print(tu)
+tu = tu[0]
+print(tu)
+x = 1
+y = 2
+x,y,z = x,x,y
+z,y,z = x,y,z
+print(x, y, z)
+a = 1
+b = 0
+a = a^b
+b = a^b
+a = a^b
+print(a,b, 1//5+1/5, [i for i in range(-1,-2)], sep="sep")
+def f(x,y):
+    if x==y:
+        return x
+    else:
+        return f(x, y-1)
+print(f(0,3))
+
+tv = (1,2,3,4)
+tv = tv[-2:-1]
+tv = tv[-1]
+print(tv)
