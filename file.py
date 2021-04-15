@@ -26,12 +26,12 @@ _nameOtherFile = input('Enter the new file name: ')
 
 try:
     _fileHandle = open(_nameOtherFile)
+    _allTxt = _fileHandle.read();
+    print('Character count: ',len(_allTxt))
+    _fileHandle.close()
 except:
     print('File cannot be opened: ', _fileHandle)
     quit()
-
-_allTxt = _fileHandle.read();
-print('Character count: ',len(_allTxt))
 
 # Writing files
 _nameNewFile = input('Enter the file name to create: ')

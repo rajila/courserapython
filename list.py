@@ -128,6 +128,36 @@ for _index, _el in enumerate(_listXXX):
         break
 print('position ->', _position)
 
+# List comprimida
+lComp = [el ** 2 for el in range(11) if el % 2 == 0]
+print('lComp', lComp)
+
+lt = [1 if el % 2 == 0 else 0 for el in range(11)]
+print('lt', lt)
+
+classA = ['A', 'C', 'P', 'Q']
+classB = ['M', 'P', 'X', 'A']
+lUnion = [a for a in classA for b in classB if a == b]
+print('lUnion', lUnion)
+
+# List comprimida []
+'''
+En el primer bucle, la lista se crea (y se itera) como un todo; en realidad,
+existe cuando se ejecuta el bucle.
+'''
+for v in [1 if x % 2 == 0 else 0 for x in range(10)]:
+    print(v, end=" ")
+print()
+
+# Generator ()
+'''
+En el segundo bucle, no hay ninguna lista,
+solo hay valores subsequentes producidos por el generador, uno por uno.
+'''
+for v in (1 if x % 2 == 0 else 0 for x in range(10)):
+    print(v, end=" ")
+print()
+
 lwords = ['hi', 'from', 'any', 'salprieta', 'salmon']
 textWords = 'hi from any salprieta salmon'
 print('sal' in lwords) # false
@@ -154,7 +184,7 @@ treplace = treplace.replace('sal', 'SSAALL')
 print(treplace)
 
 lTestOne = [1,2,3]
-lTestOne.insert(-1, 10)
+lTestOne.insert(-1, 10) # insert on position -1. tail position of list
 lTestTwo = lTestOne # Apunta  a la misma direccion de memoria
 print('L1 ->', lTestOne)
 lTestOne.append(21)
