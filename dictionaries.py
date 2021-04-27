@@ -1,109 +1,103 @@
-# print('Hi Dictionaries!!!')
-# _mapStudents = dict() # Create a dictionary
-# print(_mapStudents) # map empty
-# _mapStudents['one'] = 'uno'
-# print(_mapStudents)
-# # definition and init
-# _mapStudents = {'one':'uno', 'two':'dos', 'three':'tres'}
-# print(_mapStudents)
-# print('Length dictionary:', len(_mapStudents))
-# # Keys
-# print()
-# print('key \'one\' is in the dictionary (KEYS):','one' in _mapStudents)
-# print('value \'uno\' is in the dictionary (KEYS):', 'uno' in _mapStudents)
-# # values
-# print()
-# print('key \'one\' is in the dictionary (VALUES):','one' in list(_mapStudents.values()))
-# print('value \'uno\' is in the dictionary (VALUES):','uno' in list(_mapStudents.values()))
-#
-# _word = 'RonaldDanielAjilaCalva'
-# _mapA = dict()
-# for _letter in _word.lower() :
-#     _mapA[_letter] = _mapA.get(_letter,0) + 1
-# print(_mapA)
-# print(_mapA.get('q')) # Sin error aunq no exista la key: q. Si no existe la key retorna un None
-# # print(_mapA['q']) # Error porq no existe key: q
-#
-# dicOne = {}
-# print(type(dicOne))
-# dicOne[0] = 'Hola'
-# print(type(dicOne))
-#
-# dicTwo = dict(((0,'hi'), [1,'ronald']))
-# print(dicTwo)
-#
-# dicThree = dict(zip(['one', 'two'], range(1,3))) # no import size of elements
-# print(dicThree)
-#
-# dicFour = dict(a1 = 'a', b1 = 'b') # solo permite claves de tipo string (name de varaibles). ERROR dict('a' = 'a', 'b' = 'b'), dict(1 = 'a', 2 = 'b')
-# print(dicFour)
-#
-# dicFive = dict()
-# dicFive[(1,2)] = (4,5)
-# dicFive[('1','2')] = (4,5)
-# # dicFive[([1,2,3],2)] = (6,7) # ERROR
-# print(dicFive)
-#
-# dicSix = dict(zip(range(1,9), [el*el for el in range(1,9)]))
-# print(dicSix)
-# key = 1
-# while key in dicSix: # evaluate condition
-#     del dicSix[key]
-#     key += 1
-# print(dicSix)
-#
-# dicSix = dict(zip(range(1,9), [el*el for el in range(1,9)]))
-#
-# # for key in dicSix: del dicSix[key] # ERROR ERROR ERROR loop dictionary and can not removed element
-#
-# for key, val in list(dicSix.items()): # new list
-#     del dicSix[key]
-# print(dicSix)
-#
-# dicSeven = dict(((1,2),(2,-10),(3,40),(4,-20)))
-# print(dicSeven)
-# for key in [k for k in dicSeven if dicSeven[k] < 0]:
-#     del dicSeven[key]
-# print(dicSeven)
-#
-#
-# dicSeven = dict(zip(range(1,11), [el*el*el for el in range(1,11)]))
-# print(dicSeven)
-# print('Delete key 3 ->', dicSeven.pop(3))
-# print(dicSeven)
-# print('Delete key 3 ->', dicSeven.pop(3, 'No existe')) # If not exist key, not ERROR
-# print(dicSeven)
-#
-# dicSeven = dict(zip(range(1,3), [el*el*el for el in range(1,3)]))
-# print(dicSeven)
-# print('Delete last key, value ->', dicSeven.popitem())
-# print(dicSeven, len(dicSeven))
-# print('Delete last key, value ->', dicSeven.popitem())
-# print(dicSeven, len(dicSeven))
-# # print('Delete last key, value ->', dicSeven.popitem()) # ERROR ERROR ERROR, dictionary empty
-#
-# dicNine = dict()
-# dicNine[1] = []
-# dicNine[2] = "Hola"
-# print(dicNine)
-#
-# dicNine11 = dicNine.copy()
-# print(dicNine11)
-# dicNine11[2] = "Mundo"
-# print(dicNine, dicNine11)
-#
-# dicNine11[1].append('Spain')
-# print(dicNine, dicNine11)
-#
-# dicNine11[1] = ['Valencia']
-# print(dicNine, dicNine11)
+print('Hi Dictionaries!!!')
+_mapStudents = dict() # Create a dictionary
+print(_mapStudents) # map empty
+_mapStudents['one'] = 'uno'
+print(_mapStudents)
+# definition and init
+_mapStudents = {'one':'uno', 'two':'dos', 'three':'tres'}
+print(_mapStudents)
+print('Length dictionary:', len(_mapStudents))
+# Keys
+print()
+print('key \'one\' is in the dictionary (KEYS):','one' in _mapStudents)
+print('value \'uno\' is in the dictionary (KEYS):', 'uno' in _mapStudents)
+# values
+print()
+print('key \'one\' is in the dictionary (VALUES):','one' in list(_mapStudents.values()))
+print('value \'uno\' is in the dictionary (VALUES):','uno' in list(_mapStudents.values()))
+
+_word = 'RonaldDanielAjilaCalva'
+_mapA = dict()
+for _letter in _word.lower() :
+    _mapA[_letter] = _mapA.get(_letter,0) + 1
+print(_mapA)
+print(_mapA.get('q')) # Sin error aunq no exista la key: q. Si no existe la key retorna un None
+# print(_mapA['q']) # Error porq no existe key: q
+
+dicOne = {}
+print(type(dicOne))
+dicOne[0] = 'Hola'
+print(type(dicOne))
+
+dicTwo = dict(((0,'hi'), [1,'ronald']))
+print(dicTwo)
+
+dicThree = dict(zip(['one', 'two'], range(1,3))) # no import size of elements
+print(dicThree)
+
+dicFour = dict(a1 = 'a', b1 = 'b') # solo permite claves de tipo string (name de varaibles). ERROR dict('a' = 'a', 'b' = 'b'), dict(1 = 'a', 2 = 'b')
+print(dicFour)
+
+dicFive = dict()
+dicFive[(1,2)] = (4,5)
+dicFive[('1','2')] = (4,5)
+# dicFive[([1,2,3],2)] = (6,7) # ERROR
+print(dicFive)
+
+dicSix = dict(zip(range(1,9), [el*el for el in range(1,9)]))
+print(dicSix)
+key = 1
+while key in dicSix: # evaluate condition on WHILE
+    del dicSix[key]
+    key += 1
+print(dicSix)
+
+dicSix = dict(zip(range(1,9), [el*el for el in range(1,9)]))
+
+# for key in dicSix: del dicSix[key] # ERROR ERROR ERROR loop dictionary and can not removed element
+
+for key, val in list(dicSix.items()): # new list
+    del dicSix[key]
+print(dicSix)
+
+dicSeven = dict(((1,2),(2,-10),(3,40),(4,-20)))
+print(dicSeven)
+for key in [k for k in dicSeven if dicSeven[k] < 0]:
+    del dicSeven[key]
+print(dicSeven)
 
 
+dicSeven = dict(zip(range(1,11), [el*el*el for el in range(1,11)]))
+print(dicSeven)
+print('Delete key 3 ->', dicSeven.pop(3))
+print(dicSeven)
+print('Delete key 3 ->', dicSeven.pop(3, 'No existe')) # If not exist key, not ERROR
+print(dicSeven)
 
+dicSeven = dict(zip(range(1,3), [el*el*el for el in range(1,3)]))
+print(dicSeven)
+print('Delete last key, value ->', dicSeven.popitem())
+print(dicSeven, len(dicSeven))
+print('Delete last key, value ->', dicSeven.popitem())
+print(dicSeven, len(dicSeven))
+# print('Delete last key, value ->', dicSeven.popitem()) # ERROR ERROR ERROR, dictionary empty
 
+dicNine = dict()
+dicNine[1] = []
+dicNine[2] = "Hola"
+print(dicNine)
 
+dicNine11 = dicNine.copy() # for list, dic, apunta misma referencia
+print(dicNine11)
+dicNine11[2] = "Mundo"
+print(dicNine, dicNine11)
 
+dicNine11[1].append('Spain')
+dicNine11[1].append('Madrid')
+print(dicNine, dicNine11)
 
+dicNine11[1] = ['Valencia']
+print(dicNine, dicNine11)
 
 
 

@@ -8,33 +8,26 @@ def surname():
 
 def pmensaje():
     global mensaje
-    mensaje = 'Cambio desde pmensaje'
+    mensaje = 'Cambio desde pmensaje()'
     print(mensaje)
 
 apellido = 'Ajila'
-thing()
+thing() # Hello Ronald Ajila
 surname()
 print(apellido)
-mensaje = 'Hola desde funcion'
-print('mensaje -> ', mensaje)
-pmensaje()
-print('mensaje -> ', mensaje)
-
-num = 153
-entero = num%10
-num = num//10
-print(entero)
-print(num)
-entero = num%10
-num = num//10
-print(entero)
-print(num)
-entero = num%10
-num = num//10
-print(entero)
-print(num)
+mensaje = 'Hola desde exterior'
+print('mensaje -> ', mensaje) # Msn Start
+pmensaje() # Change var 'mensaje'
+print('mensaje -> ', mensaje) # Msn End
 
 d = {('valencia','madrid'):20}
 # elemento: madrid, valencia, murcia
-print(('madrid','valencia') in d)
-print(('valencia','madrid') in d)
+print(('madrid','valencia') in d) # False
+print(('valencia','madrid') in d) # True
+
+nameR = 'RonaldRonald'
+def testData(name=nameR):
+    print('name: {}'.format(name))
+
+nameR = 'DanielDaniel'
+testData()

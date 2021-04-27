@@ -21,6 +21,14 @@ def printFun(args, fun):
 print()
 printFun([x for x in range(-2, 3)], lambda x : 2 * x ** 2 - 4 * x + 2)
 
+# test lambda with any arguments
+def testFun(lx, ly, fun):
+    for index in range(len(lx)):
+        print('f(', lx[index], ',', ly[index], ') = ', fun(lx[index], ly[index]), sep='')
+
+print()
+testFun([x+x for x in range(-2, 3)], [x*x for x in range(-2, 3)], lambda x, y : 2 * x ** 2 - 4 * x + 2*y)
+
 # función map()
 '''
 En el más simple de todos los casos posibles, la función map() toma dos argumentos:
@@ -38,6 +46,22 @@ print(list(map(lambda x : 2 ** x, [x for x in range(5)])))
 print()
 for x in map(lambda x : x ** x, [x for x in range(5)]):
     print(x, end=' ')
+
+print()
+for x in map(lambda x, y : x ** y, [x for x in range(10)], [2]*10):
+    print(x, end=' ')
+
+print()
+for x in map(lambda x : x[0] ** x[1], [(x,2) for x in range(10)]):
+    print(x, end=' ')
+
+print()
+for name in map(lambda name, surname: '{} {}'.format(name, surname), 'Ronald', 'Ajila'):
+    print(name)
+
+print()
+for sumN in map(lambda x, y: '{} + {} = {}'.format(x, y, x+y), (15,10,5), (25,2,3)): # Only LIST iterables
+    print(sumN)
 
 # function filter()
 '''

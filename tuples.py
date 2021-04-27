@@ -48,7 +48,13 @@ print(_y)
 _x, _y = _y, _x
 print(_x)
 print(_y)
-# _x, _y = 43, 43,43 # Error very mucho values
+# _x, _y = 43, 43, 43 # ERROR, very much values
+data = (1, 2, 3, 4, 5, 6)
+m, n, o, *p = data
+print()
+print('m: {}'.format(m)) # variable normal
+print('data: {}'.format(p)) # p is a LIST
+print()
 
 # Dictinaries and tuplas
 _dataCourses = {'A': 10, 'B': 40, 'C': 24, 'D': 55}
